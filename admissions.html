@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarpit Organizations Private Limited | Admissions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-strip">
+        <div class="container">
+            <span>Email: info@samarpit.org</span>
+            <span>Admissions Helpline: +91-90000-00000</span>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="container site-header-inner">
+            <div class="brand">
+                <a href="index.html" class="brand-logo-link" aria-label="Samarpit Home">
+                    <img src="samarpit%20logo.jpeg" alt="Samarpit logo" class="brand-logo">
+                    <span class="brand-text-wrap">
+                        <span class="brand-text-main">Samarpit</span>
+                        <span class="brand-text-sub">Empowering Personal Growth</span>
+                    </span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses/Programs</a>
+                <a href="admissions.html" class="active">Admissions</a>
+                <a href="contact.html">Contact</a>
+                <a href="student-portal.html">Student Portal</a>
+                <a href="employee-portal.html">Employee Portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="section-label">Admissions</p>
+                <h2 class="section-title">Enroll in programs that shape your personality and career path</h2>
+                <p class="section-subtext">
+                    Our admissions process is designed to be simple and transparent. Submit your details,
+                    select your preferred program, and our team will guide you through counseling, batch
+                    confirmation, and onboarding.
+                </p>
+                <div class="split-layout">
+                    <div class="content-panel">
+                        <h3>Online Registration Form</h3>
+                        <form class="form-grid" id="admissionForm">
+                            <div>
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div>
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div>
+                                <label for="program">Program</label>
+                                <select id="program" name="program" required>
+                                    <option value="">Select Program</option>
+                                    <option value="foundation-soft-skills">Foundation Soft Skills</option>
+                                    <option value="advanced-communication">Advanced Communication</option>
+                                    <option value="personality-career-development">Personality & Career Development</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message">Additional Details</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your learning goals"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit Registration</button>
+                        </form>
+                        <p id="admissionMessage"></p>
+                    </div>
+
+                    <div class="stack-list">
+                        <article class="card">
+                            <h3>Admission Steps</h3>
+                            <ul class="info-list">
+                                <li>Submit online registration form.</li>
+                                <li>Receive counseling call from our team.</li>
+                                <li>Choose batch timing and confirm seat.</li>
+                                <li>Complete onboarding and start learning.</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Required Information</h3>
+                            <ul class="info-list">
+                                <li>Basic contact details and education level.</li>
+                                <li>Preferred course/program selection.</li>
+                                <li>Learning objective and career goals.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Samarpit Organizations Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

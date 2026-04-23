@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarpit Organizations Private Limited | Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-strip">
+        <div class="container">
+            <span>Email: info@samarpit.org</span>
+            <span>Admissions Helpline: +91-90000-00000</span>
+        </div>
+    </div>
+    <header class="site-header">
+        <div class="container site-header-inner">
+            <div class="brand">
+                <a href="index.html" class="brand-logo-link" aria-label="Samarpit Home">
+                    <img src="samarpit%20logo.jpeg" alt="Samarpit logo" class="brand-logo">
+                    <span class="brand-text-wrap">
+                        <span class="brand-text-main">Samarpit</span>
+                        <span class="brand-text-sub">Empowering Personal Growth</span>
+                    </span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses/Programs</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="contact.html">Contact</a>
+                <a href="student-portal.html" class="active">Student Portal</a>
+                <a href="employee-portal.html">Employee Portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="section-label">Student Portal</p>
+                <h2 class="section-title">Access your dashboard, classes, and learning resources</h2>
+                <p class="section-subtext">
+                    Student portal provides centralized access to course schedules, assignments, recordings,
+                    assessments, and performance insights.
+                </p>
+                <div class="split-layout">
+                    <div class="content-panel">
+                        <h3>Student Login</h3>
+                        <form class="form-grid" id="studentLoginForm">
+                            <div>
+                                <label for="studentEmail">Email</label>
+                                <input type="email" id="studentEmail" name="studentEmail" required>
+                            </div>
+                            <div>
+                                <label for="studentPassword">Password</label>
+                                <input type="password" id="studentPassword" name="studentPassword" required>
+                            </div>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                        <p id="studentMessage"></p>
+                    </div>
+
+                    <div class="stack-list">
+                        <article class="card">
+                            <h3>Portal Features</h3>
+                            <ul class="info-list">
+                                <li>Course modules, worksheets, and learning material access.</li>
+                                <li>Attendance, assignment tracking, and trainer announcements.</li>
+                                <li>Progress dashboard with assessment records.</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Future Integrations</h3>
+                            <p>WordPress member access and LearnDash dashboards can be connected for full LMS workflows.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Samarpit Organizations Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
