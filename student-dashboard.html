@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Samarpit</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="samarpit%20logo.jpeg" alt="Samarpit logo">
+                <div>
+                    <h1>Samarpit</h1>
+                    <small>Student Dashboard</small>
+                </div>
+            </div>
+            <nav class="menu">
+                <button class="active" data-section="sec-dashboard">Dashboard</button>
+                <button data-section="sec-attendance">Attendance</button>
+                <button data-section="sec-idcard">ID Card</button>
+                <button data-section="sec-results">Results</button>
+                <button data-section="sec-assignments">Assignments</button>
+                <button data-section="sec-projects">Projects</button>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <header class="top-bar">
+                <div class="top-left">
+                    <h2>Samarpit Student Learning Portal</h2>
+                    <p>Academic Progress, Attendance, and Project Workspace</p>
+                </div>
+                <div class="top-right">
+                    <button id="darkToggle" class="icon-btn">Dark Mode</button>
+                    <button id="notifBtn" class="icon-btn">Bell <span id="notifCount" class="badge">0</span>
+                        <div id="notifDropdown" class="notif-dropdown">
+                            <div id="notifList"></div>
+                        </div>
+                    </button>
+                    <div class="profile-chip">
+                        <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Student photo">
+                        <div>
+                            <strong id="profileName">Student</strong><br>
+                            <small id="profileRole">Class</small>
+                        </div>
+                    </div>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <section id="sec-dashboard" class="panel dash-section">
+                <article class="welcome-card">
+                    <h3 id="welcomeMessage">Welcome back</h3>
+                    <p>Review attendance, grades, assignments, and project progress.</p>
+                </article>
+                <div id="summaryCards"></div>
+                <article class="section-card">
+                    <h3>Performance Chart</h3>
+                    <div id="attendanceChart"></div>
+                </article>
+            </section>
+
+            <section id="sec-attendance" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Attendance Records</h3>
+                    <p>Overall attendance: <strong>91%</strong></p>
+                    <div id="attendanceTable"></div>
+                </article>
+            </section>
+
+            <section id="sec-idcard" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Student ID Card</h3>
+                    <div class="id-card">
+                        <div class="id-card-head">Samarpit Student ID</div>
+                        <div class="id-card-body">
+                            <img class="id-photo" src="https://i.pravatar.cc/120?img=12" alt="Student">
+                            <p><strong>Name:</strong> Rahul Verma</p>
+                            <p><strong>Student ID:</strong> STU-2026-143</p>
+                            <p><strong>Class/Dept:</strong> B.Com Final Year</p>
+                            <p><strong>Contact:</strong> +91 90123 45678</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="sec-results" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Results</h3>
+                    <p>Total: <strong>355</strong> | Percentage: <strong>88.75%</strong> | Grade: <strong>A</strong></p>
+                    <div id="resultsTable"></div>
+                </article>
+            </section>
+
+            <section id="sec-assignments" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Assignments</h3>
+                    <div id="assignmentTable"></div>
+                </article>
+            </section>
+
+            <section id="sec-projects" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Current Projects</h3>
+                    <div id="projectCards" class="summary-grid"></div>
+                </article>
+                <article class="section-card">
+                    <h3>Upcoming Projects</h3>
+                    <div id="upcomingProjects"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        initStudentDashboard();
+    </script>
+</body>
+</html>

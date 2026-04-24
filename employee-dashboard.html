@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard | Samarpit</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="samarpit%20logo.jpeg" alt="Samarpit logo">
+                <div>
+                    <h1>Samarpit</h1>
+                    <small>Employee Dashboard</small>
+                </div>
+            </div>
+            <nav class="menu">
+                <button class="active" data-section="sec-dashboard">Dashboard</button>
+                <button data-section="sec-attendance">Attendance</button>
+                <button data-section="sec-idcard">ID Card</button>
+                <button data-section="sec-payslips">Payslips</button>
+                <button data-section="sec-projects">Projects</button>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <header class="top-bar">
+                <div class="top-left">
+                    <h2>Samarpit Organizations Private Limited</h2>
+                    <p>Employee Productivity and Operations Dashboard</p>
+                </div>
+                <div class="top-right">
+                    <button id="darkToggle" class="icon-btn">Dark Mode</button>
+                    <button id="notifBtn" class="icon-btn">Bell <span id="notifCount" class="badge">0</span>
+                        <div id="notifDropdown" class="notif-dropdown">
+                            <div id="notifList"></div>
+                        </div>
+                    </button>
+                    <div class="profile-chip">
+                        <img class="avatar" src="https://i.pravatar.cc/100?img=48" alt="Employee photo">
+                        <div>
+                            <strong id="profileName">Employee</strong><br>
+                            <small id="profileRole">Role</small>
+                        </div>
+                    </div>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <section id="sec-dashboard" class="panel dash-section">
+                <article class="welcome-card">
+                    <h3 id="welcomeMessage">Welcome back</h3>
+                    <p>Track your attendance, projects, and payroll updates in one place.</p>
+                </article>
+                <div id="summaryCards"></div>
+                <article class="section-card">
+                    <h3>Attendance Trend (Weekly)</h3>
+                    <div id="attendanceChart"></div>
+                </article>
+            </section>
+
+            <section id="sec-attendance" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Attendance Records</h3>
+                    <p>Overall attendance: <strong>91%</strong></p>
+                    <div id="attendanceTable"></div>
+                </article>
+            </section>
+
+            <section id="sec-idcard" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Employee ID Card</h3>
+                    <div class="id-card">
+                        <div class="id-card-head">Samarpit Employee ID</div>
+                        <div class="id-card-body">
+                            <img class="id-photo" src="https://i.pravatar.cc/120?img=48" alt="Employee">
+                            <p><strong>Name:</strong> Ananya Sharma</p>
+                            <p><strong>Employee ID:</strong> EMP-2026-071</p>
+                            <p><strong>Department:</strong> Training & Development</p>
+                            <p><strong>Contact:</strong> +91 98765 43210</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="sec-payslips" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Monthly Payslips</h3>
+                    <div id="payslipTable"></div>
+                </article>
+            </section>
+
+            <section id="sec-projects" class="panel dash-section hidden">
+                <article class="section-card">
+                    <h3>Assigned Projects</h3>
+                    <div id="projectCards" class="summary-grid"></div>
+                </article>
+                <article class="section-card">
+                    <h3>Upcoming Projects</h3>
+                    <div id="upcomingProjects"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        initEmployeeDashboard();
+    </script>
+</body>
+</html>
